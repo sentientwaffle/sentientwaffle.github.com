@@ -1,0 +1,207 @@
+---
+---
+
+@import "nib"
+
+dblue = #4183C4
+container-width = 850px
+
+user-select(val)
+  -webkit-user-select val
+
+@font-face
+  font-family 'Inconsolata'
+  font-style normal
+  font-weight normal
+  src local('Inconsolata'), url('/fonts/Inconsolata.ttf') format('woff')
+
+
+/* Layout
+-------------------------------------*/
+*
+  font-family sans-serif
+  margin 0px
+  padding 0px
+
+
+html
+  overflow visible
+
+body
+  background white
+  color #222
+  overflow auto
+
+body > header
+  padding 2px 0px
+  width 100%
+  > .container
+    border-bottom 2px solid #ccc
+  
+  h1
+    display inline-block
+    margin 0px
+    margin-right 20px
+    user-select none
+    
+    a
+      color #333
+      font-family 'Inconsolata', monospace
+      &:hover
+        color dblue
+        text-decoration none
+  
+  nav
+    display inline-block
+    relative bottom 5px
+    > ul
+      list-style none
+      margin 0px
+      
+      > li
+        display inline-block
+      
+      a
+        color #444
+        font-weight bold
+        padding 11px
+        &::before, &::after
+          font-size 120%
+          visibility hidden
+        &::before
+          content '{'
+        &::after
+          content '}'
+        &:hover
+          color #222
+          text-decoration none
+          &::before, &::after
+            visibility visible
+  
+  .symbol
+    color #555
+    float right
+    font-size 150%
+    padding 11px
+    relative bottom 8px
+    &:hover
+      text-decoration none
+
+
+body > footer
+  color #666
+  font-size 70%
+  text-align center
+  .container
+    padding 16px
+
+.container
+  clear both
+  margin 0px auto
+  max-width container-width
+
+
+.atom::after
+  content 'B'
+.atom:hover
+  color orange
+.twitter::after
+  content 't'
+.twitter:hover
+  color #4ed3ff
+
+/* Base styles.
+--------------------------------------------*/
+a
+  color dblue
+  text-decoration none
+  &:hover
+    text-decoration underline
+
+p
+  line-height 20px
+  margin-top 10px
+
+ul, ol
+  margin 20px 40px 
+
+li > ul, li > ol
+  margin 5px 40px
+
+h1, h2, h3, h4, h5, h6
+  color black
+  margin 20px 0px 10px
+h3, h4, h5, h6
+  color #111
+
+::selection, ::-moz-selection
+  background rgba(black, 0.6)
+  color white
+
+code
+  background #eee
+  font-family 'Inconsolata', monospace
+
+pre
+  background #eee
+  border 1px solid #ddd
+  border-radius 8px
+  box-shadow inset 1px 1px 1px rgba(black, 0.06)
+  margin 6px
+  padding 4px
+
+hr
+  background #ccc
+  border none
+  height 2px
+  margin 10px 0px
+
+
+/* Front page layout
+----------------------------------------------*/
+
+.posts
+  > ul
+    list-style none
+    margin 20px 0px 0px
+  
+  li
+    border-bottom 1px solid #fafafa
+    padding 10px 30px
+    position relative
+    > a
+      font-size 110%
+  li:last-child
+    border-bottom none
+  
+  time
+    absolute right 30px top 13px
+    color #777
+    font-size smaller
+
+
+/* Post layout
+----------------------------------------------*/
+.post
+  > header
+    position relative
+    > h1
+      font-size 200%
+    > time
+      absolute bottom 0px right 0px
+      color #888
+      font-size smaller
+
+  > footer
+    font-size smaller
+    relative top 10px
+
+// Post pagination.
+.prev-post, .next-post
+  position absolute
+
+.prev-post
+  left 0px
+.next-post
+  right 0px
+
