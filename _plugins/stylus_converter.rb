@@ -1,3 +1,4 @@
+# cat style.styl | stylus --use nib > style.css
 require 'shellwords'
 
 module Jekyll

@@ -1,0 +1,235 @@
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Inconsolata'), url("/fonts/Inconsolata.ttf") format('woff');
+}
+/* Layout
+-------------------------------------*/
+* {
+  font-family: sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+html {
+  overflow: visible;
+}
+body {
+  background: #fff;
+  color: #222;
+  overflow: auto;
+}
+body > header {
+  padding: 2px 0px;
+  width: 100%;
+}
+body > header > .container {
+  border-bottom: 2px solid #ccc;
+}
+body > header h1 {
+  display: inline-block;
+  margin: 0px;
+  margin-right: 20px;
+  -webkit-user-select: none;
+}
+body > header h1 a {
+  color: #333;
+  font-family: 'Inconsolata', monospace;
+}
+body > header h1 a:hover {
+  color: #4183c4;
+  text-decoration: none;
+}
+body > header nav {
+  display: inline-block;
+  position: relative;
+  bottom: 5px;
+  ((null)): 0;
+}
+body > header nav > ul {
+  list-style: none;
+  margin: 0px;
+}
+body > header nav > ul > li {
+  display: inline-block;
+}
+body > header nav > ul a {
+  color: #444;
+  font-weight: bold;
+  padding: 11px;
+}
+body > header nav > ul a::before,
+body > header nav > ul a::after {
+  font-size: 120%;
+  visibility: hidden;
+}
+body > header nav > ul a::before {
+  content: '{';
+}
+body > header nav > ul a::after {
+  content: '}';
+}
+body > header nav > ul a:hover {
+  color: #222;
+  text-decoration: none;
+}
+body > header nav > ul a:hover::before,
+body > header nav > ul a:hover::after {
+  visibility: visible;
+}
+body > header .symbol {
+  color: #555;
+  float: right;
+  font-size: 150%;
+  padding: 11px;
+  position: relative;
+  bottom: 8px;
+  ((null)): 0;
+}
+body > header .symbol:hover {
+  text-decoration: none;
+}
+body > footer {
+  color: #666;
+  font-size: 70%;
+  text-align: center;
+}
+body > footer .container {
+  padding: 16px;
+}
+.container {
+  clear: both;
+  margin: 0px auto;
+  max-width: 850px;
+}
+.atom::after {
+  content: 'B';
+}
+.atom:hover {
+  color: #ffa500;
+}
+.twitter::after {
+  content: 't';
+}
+.twitter:hover {
+  color: #4ed3ff;
+}
+/* Base styles.
+--------------------------------------------*/
+a {
+  color: #4183c4;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+p {
+  line-height: 20px;
+  margin-top: 10px;
+}
+ul,
+ol {
+  margin: 20px 40px;
+}
+li > ul,
+li > ol {
+  margin: 5px 40px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000;
+  margin: 20px 0px 10px;
+}
+h3,
+h4,
+h5,
+h6 {
+  color: #111;
+}
+::selection,
+::-moz-selection {
+  background: rgba(0,0,0,0.60);
+  color: #fff;
+}
+code {
+  background: #eee;
+  font-family: 'Inconsolata', monospace;
+}
+pre {
+  background: #eee;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.06);
+  -moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.06);
+  box-shadow: inset 1px 1px 1px rgba(0,0,0,0.06);
+  margin: 6px;
+  padding: 4px;
+}
+hr {
+  background: #ccc;
+  border: none;
+  height: 2px;
+  margin: 10px 0px;
+}
+/* Front page layout
+----------------------------------------------*/
+.posts > ul {
+  list-style: none;
+  margin: 20px 0px 0px;
+}
+.posts li {
+  border-bottom: 1px solid #fafafa;
+  padding: 10px 30px;
+  position: relative;
+}
+.posts li > a {
+  font-size: 110%;
+}
+.posts li:last-child {
+  border-bottom: none;
+}
+.posts time {
+  position: absolute;
+  right: 30px;
+  top: 13px;
+  color: #777;
+  font-size: smaller;
+}
+/* Post layout
+----------------------------------------------*/
+.post > header {
+  position: relative;
+}
+.post > header > h1 {
+  font-size: 200%;
+}
+.post > header > time {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  color: #888;
+  font-size: smaller;
+}
+.post > footer {
+  font-size: smaller;
+  position: relative;
+  top: 10px;
+  ((null)): 0;
+}
+.prev-post,
+.next-post {
+  position: absolute;
+}
+.prev-post {
+  left: 0px;
+}
+.next-post {
+  right: 0px;
+}
+
