@@ -16,7 +16,7 @@ user-select(val)
 /* Layout
 -------------------------------------*/
 *
-  font-family sans-serif
+  font-family 'Helvetica Neue', Helvetica, Arial, sans-serif
   margin 0px
   padding 0px
 
@@ -95,7 +95,7 @@ body > footer
 .container
   clear both
   margin 0px auto
-  max-width container-width
+  width container-width
 
 
 .atom::after
@@ -201,4 +201,123 @@ hr
   left 0px
 .next-post
   right 0px
+
+/* Resume styles
+----------------------------------------------*/
+.resume
+  > .intro
+    float left
+    margin-right 4%
+    width 30%
+    h1
+      color #222
+      font-size 34px
+      margin-bottom 0px
+    h2
+      color #222
+      font-weight normal
+      font-size 14px
+      em
+        font-size 16px
+    
+    .links
+      border-top 2px solid #ccc
+  
+  > img
+    cursor pointer
+  
+  .links
+    margin 10px 0px
+    padding 10px 20px
+    li > a
+      background #eee
+      border-left 17px solid #888
+      display block
+      margin 3px 0px
+      padding-left 10px
+      &:hover
+        background dblue
+        border-left-color darken(dblue, 70%)
+        color white
+        text-decoration none
+  
+  > .stratus-editor
+    box-shadow 0px 0px 10px 2px rgba(black, 0.3)
+    float left
+    margin-top 20px
+    width 66%
+  
+  > hr
+    visibility hidden
+    width 100%
+  > h1
+    border-top 2px solid #ccc
+    border-bottom 2px solid #ccc
+    color #2a2a2a
+    display inline-block
+    font-size 32px
+    margin 20px 0px 0px
+    relative top 10px
+    text-align center
+    width 100%
+  
+  > .project
+    float left
+    margin 1px
+    width 281px
+    & > h1, & > h1 > a
+      background #eee
+      color #444
+      display block
+      font-family Impact, Haettenschweiler, 'Franklin Gothic Bold', Charcoal, 'Helvetica Inserat', 'Bitstream Vera Sans Bold', 'Arial Black', 'sans serif'
+      font-size 32px
+      font-weight normal
+      padding-left 5px
+      text-shadow 0px 1px 0px white
+      small
+        font-size 16px
+        relative bottom 6px
+  
+  figure
+    border 1px solid #999
+    margin 10px 0px
+    position relative
+    > img
+      cursor pointer
+      max-width 279px
+    > figcaption
+      absolute bottom 0px left 0px
+      background rgba(black, 0.7)
+      color white
+      padding 6px 0px
+      right 0px
+      text-align center
+  
+  ul
+    margin 0px
+  .list
+    font-size 15px
+    margin 10px 0px 10px 30px
+    li
+      border-left 17px solid #aaa
+      margin 4px 0px
+      padding-left 6px
+  p
+    font-size 15px
+    line-height 18px
+  ul
+    list-style none
+  em
+    font-style normal
+    font-weight bold
+
+
+// Fancybox style image display
+.popover
+  box-shadow 0px 0px 0px 20px rgba(black, 0.8), 0px 0px 0px 1000px rgba(black, 0.3)
+  cursor pointer
+  fixed top 50% left 50%
+  max-height 100%
+  max-width 100%
+
 

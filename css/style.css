@@ -7,7 +7,7 @@
 /* Layout
 -------------------------------------*/
 * {
-  font-family: sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin: 0px;
   padding: 0px;
 }
@@ -100,7 +100,7 @@ body > footer .container {
 .container {
   clear: both;
   margin: 0px auto;
-  max-width: 850px;
+  width: 850px;
 }
 .atom::after {
   content: 'B';
@@ -231,5 +231,149 @@ hr {
 }
 .next-post {
   right: 0px;
+}
+/* Resume styles
+----------------------------------------------*/
+.resume > .intro {
+  float: left;
+  margin-right: 4%;
+  width: 30%;
+}
+.resume > .intro h1 {
+  color: #222;
+  font-size: 34px;
+  margin-bottom: 0px;
+}
+.resume > .intro h2 {
+  color: #222;
+  font-weight: normal;
+  font-size: 14px;
+}
+.resume > .intro h2 em {
+  font-size: 16px;
+}
+.resume > .intro .links {
+  border-top: 2px solid #ccc;
+}
+.resume > img {
+  cursor: pointer;
+}
+.resume .links {
+  margin: 10px 0px;
+  padding: 10px 20px;
+}
+.resume .links li > a {
+  background: #eee;
+  border-left: 17px solid #888;
+  display: block;
+  margin: 3px 0px;
+  padding-left: 10px;
+}
+.resume .links li > a:hover {
+  background: #4183c4;
+  border-left-color: #13273c;
+  color: #fff;
+  text-decoration: none;
+}
+.resume > .stratus-editor {
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.30);
+  -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.30);
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.30);
+  float: left;
+  margin-top: 20px;
+  width: 66%;
+}
+.resume > hr {
+  visibility: hidden;
+  width: 100%;
+}
+.resume > h1 {
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  color: #2a2a2a;
+  display: inline-block;
+  font-size: 32px;
+  margin: 20px 0px 0px;
+  position: relative;
+  top: 10px;
+  ((null)): 0;
+  text-align: center;
+  width: 100%;
+}
+.resume > .project {
+  float: left;
+  margin: 1px;
+  width: 281px;
+}
+.resume > .project > h1,
+.resume > .project > h1 > a {
+  background: #eee;
+  color: #444;
+  display: block;
+  font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', Charcoal, 'Helvetica Inserat', 'Bitstream Vera Sans Bold', 'Arial Black', 'sans serif';
+  font-size: 32px;
+  font-weight: normal;
+  padding-left: 5px;
+  text-shadow: 0px 1px 0px #fff;
+}
+.resume > .project > h1 small,
+.resume > .project > h1 > a small {
+  font-size: 16px;
+  position: relative;
+  bottom: 6px;
+  ((null)): 0;
+}
+.resume figure {
+  border: 1px solid #999;
+  margin: 10px 0px;
+  position: relative;
+}
+.resume figure > img {
+  cursor: pointer;
+  max-width: 279px;
+}
+.resume figure > figcaption {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background: rgba(0,0,0,0.70);
+  color: #fff;
+  padding: 6px 0px;
+  right: 0px;
+  text-align: center;
+}
+.resume ul {
+  margin: 0px;
+}
+.resume .list {
+  font-size: 15px;
+  margin: 10px 0px 10px 30px;
+}
+.resume .list li {
+  border-left: 17px solid #aaa;
+  margin: 4px 0px;
+  padding-left: 6px;
+}
+.resume p {
+  font-size: 15px;
+  line-height: 18px;
+}
+.resume ul {
+  list-style: none;
+}
+.resume em {
+  font-style: normal;
+  font-weight: bold;
+}
+.popover {
+  -webkit-box-shadow: 0px 0px 0px 20px rgba(0,0,0,0.80), 0px 0px 0px 1000px rgba(0,0,0,0.30);
+  -moz-box-shadow: 0px 0px 0px 20px rgba(0,0,0,0.80), 0px 0px 0px 1000px rgba(0,0,0,0.30);
+  box-shadow: 0px 0px 0px 20px rgba(0,0,0,0.80), 0px 0px 0px 1000px rgba(0,0,0,0.30);
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-height: 100%;
+  max-width: 100%;
 }
 

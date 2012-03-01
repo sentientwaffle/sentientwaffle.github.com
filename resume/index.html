@@ -1,0 +1,215 @@
+---
+layout: default
+title: Resume
+email: xxxsentxxixexntwxxxafxxfxlexx@gxmxail.xcomxx
+---
+
+<script>
+  jQuery(function($) {
+    // Hide popover images when the body is clicked.
+    $("body").on("click", function() {
+      var $img = $(".popover");
+      $img.fadeOut("fast", function() {
+        $img.remove();
+      });
+      if ($img.length) {
+        return false;
+      }
+    });
+    
+    // De-obfuscate the email address.
+    var $email = $(".links .email");
+    $email.attr("href", $email.attr("href").replace(/x/g, ""));
+    
+    // Zoom images when they are clicked on.
+    $(document).on("click", "figure > img, .resume > img", function() {
+      var $img = $(this).clone();
+      $img
+        .addClass("popover")
+        .css({visibility: "hidden"})
+        .appendTo("body")
+        .on("click", function() {
+          $(this).fadeOut("fast");
+        });
+      
+      setTimeout(function() {
+        $img.css(
+        { "margin-left": -$img.width()/2
+        , "margin-top":  -$img.height()/2
+        , "visibility":  "visible"
+        });
+      }, 30);
+    });
+  });
+</script>
+
+<div class="resume">
+  <article class="intro">
+    <header>
+      <h1>DJ Gardiner</h1>
+      <h2>I love building <em>web applications</em>.</h2>
+    </header>
+    <section class="about">
+      <p>
+        I especially love building web applications for building web applications.
+      </p><p>
+        Thats why I am building <a href="http://stratuseditor.com/">Stratus Editor</a>.
+      </p><p>
+        And its why I want to help build <em>GitHub</em>.
+      </p>
+    </section>
+    <ul class="links">
+      <li><a href="https://github.com/stratuseditor">GitHub (Stratus Editor)</a></li>
+      <li><a href="https://github.com/sentientwaffle">GitHub</a></li>
+      <li><a class="email" href="mailto:{{ page.email }}">Email</a></li>
+      <li><a href="https://twitter.com/#!/sentientwaffle">Twitter</a></li>
+    </ul>
+  </article>
+  <img class="stratus-editor" src="/images/resume/stratus/editor.png" draggable="false"/>
+  
+  <hr/>
+  <h1>Samples of my work:</h1>
+  <article class="project">
+    <h1><a href="https://github.com/sentientwaffle/gift">Gift</a></h1>
+    <p>
+      <a href="https://github.com/sentientwaffle/gift">Gift</a> is
+      Node.js wrapper for <em>Git</em> written in CoffeeScript. The API is
+      based on that of <a href="https://github.com/mojombo/grit">Grit</a>.
+    </p>
+    <p>
+      I am using it to build a GitHub-for-Mac inspired Git interface
+      for <a href="http://stratuseditor.com/">Stratus Editor</a>.
+    </p>
+    <p>This is what it currently looks like:</p>
+    <figure>
+      <img src="/images/resume/stratus/git-history.png" draggable="false"/>
+      <figcaption>Stratus - Commit history</figcaption>
+    </figure>
+    <figure>
+      <img src="/images/resume/stratus/git-commit.png" draggable="false"/>
+      <figcaption>Stratus - Commit changes</figcaption>
+    </figure>
+    <figure>
+      <img src="/images/resume/stratus/git-branches.png" draggable="false"/>
+      <figcaption>Stratus - List branches</figcaption>
+    </figure>
+    
+    <p><em>Tech used:</em></p>
+    <ul class="links">
+      <li><a href="http://git-scm.com/"><em>Git</em></a></li>
+      <li><a href="http://nodejs.org/">Node.js</a></li>
+      <li><a href="http://coffeescript.org/">CoffeeScript</a></li>
+      <li><a href="http://underscorejs.org/">Underscore.js</a></li>
+    </ul>
+  </article>
+  <article class="project">
+    <h1><a href="https://github.com/stratuseditor/stratus">Stratus Editor</a></h1>
+    <p>
+      <a href="http://stratuseditor.com/">Stratus Editor</a>
+      is a web based programmer's editor with
+      <a href="http://stratuseditor.com/bundles/">bundles</a>,
+      <a href="http://stratuseditor.com/plugins/">plugins</a>
+      (written in JavaScript or CoffeeScript),
+      split screen, autocomplete, a file tree, and
+      (<a href="https://github.com/stratuseditor/stratus/tree/git-ui">soon!</a>)
+      Git integration.
+    </p>
+    
+    <figure>
+      <img src="/images/resume/stratus/editor.png" draggable="false"/>
+      <figcaption>Stratus Editor</figcaption>
+    </figure>
+    
+    <p>
+      <em><a href="https://github.com/stratuseditor/fractus">Fractus</a></em>
+      is the standalone editor component of Stratus Editor.
+    </p>
+    <figure>
+      <img src="/images/resume/stratus/fractus.png" draggable="false"/>
+      <figcaption>Fractus</figcaption>
+    </figure>
+    <p>
+      <em><a href="https://github.com/stratuseditor/stratus-color">Stratus-color</a></em>
+      is the syntax highlighter component of Stratus. It can also be used standalone
+      via CLI or Node.js to highlight static code.
+    </p>
+    
+    <p><em>Tech used:</em></p>
+    <ul class="links">
+      <li><a href="http://nodejs.org/"><em>Node.js</em></a></li>
+      <li><a href="http://coffeescript.org/">CoffeeScript</a></li>
+      <li><a href="http://jquery.com/">jQuery</a></li>
+      <li><a href="http://underscorejs.org/">Underscore.js</a></li>
+      <li><a href="http://expressjs.com/">Express</a></li>
+      <li><a href="http://socket.io/">Socket.io</a></li>
+    </ul>
+  </article>
+  <article class="project">
+    <h1><a href="#">Motorcycleopedia</a></h1>
+    <p>
+      Motorcycleopedia.com is database of almost every motorcycle produced
+      (with photos and specifications).
+    </p>
+    
+    <figure>
+      <img src="/images/resume/499-detail.jpg" draggable="false"/>
+      <figcaption>Bike details</figcaption>
+    </figure>
+    <figure>
+      <img src="/images/resume/499-search.jpg" draggable="false"/>
+      <figcaption>Search for Bikes</figcaption>
+    </figure>
+    
+    <p><b>Note: </b>Motorcycleopedia.com has not yet launched.</p>
+    
+    <p><em>Tech used:</em></p>
+    <ul class="links">
+      <li><a href="http://rubyonrails.org/"><em>Rails</em></a></li>
+      <li><a href="http://www.ruby-lang.org/en/">Ruby</a></li>
+      <li><a href="http://jquery.com/">jQuery</a></li>
+      <li><a href="http://www.mysql.com/">MySQL</a></li>
+      <li><a href="http://wiki.nginx.org/">Nginx</a></li>
+      <li><a href="http://www.modrails.com/">Passenger</a></li>
+      <li><a href="https://github.com/dchelimsky/rspec">RSpec</a></li>
+      <li><a href="http://sass-lang.com/">Sass</a></li>
+    </ul>
+  </article>
+  
+  <hr/>
+  <h1>More About Me</h1>
+  <article class="project">
+    <h1>My <small>(other)</small> Interests</h1>
+    <ul class="list">
+      <li>Computer linguistics</li>
+      <li>Long-distance running</li>
+      <li>Robotics</li>
+      <li>Chemistry</li>
+      <li>Reading science fiction</li>
+      <li>Typography</li>
+    </ul>
+  </article>
+  <article class="project">
+    <h1>Other Tech</h1>
+    <p>In addition to the technologies listed above, I am comfortable with:</p>
+    <ul class="links">
+      <li><a href="http://python.org/">Python</a></li>
+      <li><a href="https://developer.mozilla.org/en/JavaScript">JavaScript</a></li>
+      <li><a href="http://www.debian.org/">Linux (primarily Debian)</a></li>
+      <li><a href="http://www.java.com/en/">Java (yuck)</a></li>
+      <li><a href="http://racket-lang.org/">Racket (PLT Scheme)</a></li>
+      <li><a href="http://cukes.info/">Cucumber</a></li>
+      <li><a href="https://developer.mozilla.org/en/CSS/CSS_Reference">CSS</a></li>
+      <li><a href="http://learnboost.github.com/stylus/">Stylus</a></l>
+    </ul>
+    <p>
+      Then there are those miscellaneous technologies that I have used infrequently,
+      but have yet to use on a significant project:
+    </p>
+    <ul class="links">
+      <li><a href="http://www.haskell.org/haskellwiki/Haskell">Haskell</a></li>
+      <li><a href="http://golang.org/">Go</a></li>
+      <li><a href="http://redis.io/">Redis</a></li>
+      <li><a href="http://www.mongodb.org/">MongoDB</a></li>
+    </ul>
+  </article>
+</div>
