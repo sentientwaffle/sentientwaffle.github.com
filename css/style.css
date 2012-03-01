@@ -262,7 +262,8 @@ hr {
   margin: 10px 0px;
   padding: 10px 20px;
 }
-.resume .links li > a {
+.resume .links li > a,
+.resume .links li > span {
   background: #eee;
   border-left: 17px solid #888;
   display: block;
