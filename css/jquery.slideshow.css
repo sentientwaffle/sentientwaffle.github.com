@@ -1,0 +1,88 @@
+.slideshow {
+  background: #f8f8f8;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 1px 5px rgba(0,0,0,0.30);
+  -moz-box-shadow: 0px 1px 5px rgba(0,0,0,0.30);
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.30);
+  font-family: sans-serif;
+  list-style: none;
+  overflow: hidden;
+  padding: 10px 10px 30px;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.slideshow > .slideshow-wrapper {
+  border-color: #ccc #ddd #ddd #ccc;
+  border-style: solid;
+  border-width: 1px;
+  height: 100%;
+  overflow: hidden;
+}
+.slideshow > .slideshow-wrapper > .slideshow-slides {
+  width: 10000px;
+}
+.slideshow > .slideshow-wrapper > .slideshow-slides > figure {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+.slideshow > .slideshow-wrapper > .slideshow-slides > figure.current {
+  display: block;
+}
+.slideshow > .slideshow-wrapper > .slideshow-slides > figure > figcaption {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background: rgba(0,0,0,0.70);
+  color: #fff;
+  font-size: 13px;
+  padding: 7px;
+  text-align: center;
+  right: 0px;
+}
+.slideshow > .slideshow-indices {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+.slideshow > .slideshow-indices > li {
+  border: 1px solid transparent;
+  color: #555;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 13px;
+  margin: 3px 2px;
+  padding: 2px 7px;
+  text-shadow: 0px 1px 0px #fff, 0px -1px 1px rgba(0,0,0,0.10);
+}
+.slideshow > .slideshow-indices > li:hover {
+  color: #222;
+}
+.slideshow > .slideshow-indices > li.prev,
+.slideshow > .slideshow-indices > li.next {
+  font-weight: bold;
+  position: relative;
+  bottom: 2px;
+  ((null)): 0;
+  padding: 2px 3px 6px 3px;
+}
+.slideshow > .slideshow-indices > li.current {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ccc), color-stop(1, #ddd));
+  background: -webkit-linear-gradient(top, #ccc 0%, #ddd 100%);
+  background: -moz-linear-gradient(top, #ccc 0%, #ddd 100%);
+  background: linear-gradient(top, #ccc 0%, #ddd 100%);
+  border-color: #fff;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -webkit-box-shadow: inset 0px 0px 4px rgba(0,0,0,0.35);
+  -moz-box-shadow: inset 0px 0px 4px rgba(0,0,0,0.35);
+  box-shadow: inset 0px 0px 4px rgba(0,0,0,0.35);
+  color: #222;
+  font-weight: bold;
+}
+
